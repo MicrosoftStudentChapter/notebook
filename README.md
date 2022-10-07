@@ -1,4 +1,4 @@
-# notebook
+# Notebook
 
 A simple app for taking notes. This application focuses on keeping the interface as minimal as possible to provide a stable
 and amazing experience to its users.
