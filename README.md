@@ -7,6 +7,8 @@ and amazing experience to its users.
 To start working with this project you need to have flutter installed on your system(Please refer to this [link](https://docs.flutter.dev/get-started/install) for installation).
 We encourage you to test the application on as many devices(virtual or physical) as possible and if you find any bugs please report them as issues with the `bug` label.
 
+<b>Figma Design: </b> [Figma Link](https://www.figma.com/file/MmrpClnVuxObP8xP7HV8VU/Notebook?node-id=0%3A1)
+
 ## Getting Started
 
 If you are just getting started with flutter, checkout the following resources:
