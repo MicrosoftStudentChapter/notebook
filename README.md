@@ -14,4 +14,4 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-<b>Please go through the [CONTRIBUTING.MD] file before you start working on this project</b>
+<b>Please go through the [CONTRIBUTING.MD](CONTRIBUTING.MD) file before you start working on this project</b>
