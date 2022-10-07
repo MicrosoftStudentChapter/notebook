@@ -9,6 +9,8 @@ We encourage you to test the application on as many devices(virtual or physical)
 
 <b>Figma Design: </b> [Figma Link](https://www.figma.com/file/MmrpClnVuxObP8xP7HV8VU/Notebook?node-id=0%3A1)
 
+<b> The Pull Requests would be merged on a First Come, First Serve Basis </b>
+
 ## Getting Started
 
 If you are just getting started with flutter, checkout the following resources:
