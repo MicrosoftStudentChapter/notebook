@@ -19,4 +19,4 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 ## Contributing
-Please go through the [CONTRIBUTING.MD](CONTRIBUTING.MD) file before you start working on this project
+Please go through the [CONTRIBUTING.MD](CONTRIBUTING.md) file before you start working on this project
