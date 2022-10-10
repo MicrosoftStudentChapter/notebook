@@ -22,10 +22,10 @@ class _ExpandNotesState extends State<ExpandNotes> {
       persistentFooterButtons: [
         Ink(
           width: MediaQuery.of(context).size.width,
-          height: 60,
+          height: 40,
           decoration: BoxDecoration(
             color: Theme.of(context).textTheme.bodyText1!.color,
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.circular(12),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -33,7 +33,7 @@ class _ExpandNotesState extends State<ExpandNotes> {
               Text(
                 "B",
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 20,
                   fontWeight: FontWeight.w900,
                   color: Theme.of(context).scaffoldBackgroundColor,
                 ),
@@ -41,7 +41,7 @@ class _ExpandNotesState extends State<ExpandNotes> {
               Text(
                 "I",
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 20,
                   fontStyle: FontStyle.italic,
                   color: Theme.of(context).scaffoldBackgroundColor,
                 ),
@@ -104,8 +104,8 @@ class Header extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(right: 10),
                   child: Ink(
-                    width: 35,
-                    height: 35,
+                    width: 30,
+                    height: 30,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(),
@@ -121,7 +121,7 @@ class Header extends StatelessWidget {
                 "Edit Note",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 30,
+                    fontSize: 20,
                     color: Theme.of(context).textTheme.bodyText1!.color),
               ),
               Padding(
@@ -131,8 +131,8 @@ class Header extends StatelessWidget {
                     Navigator.pop(context);
                   },
                   child: Ink(
-                    width: 35,
-                    height: 35,
+                    width: 30,
+                    height: 30,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(),
@@ -152,7 +152,7 @@ class Header extends StatelessWidget {
               const EdgeInsets.symmetric(vertical: 15).copyWith(bottom: 10),
           child: const Text(
             "How to design using photoshop???",
-            style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18),
+            style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
           ),
         ),
         Container(
@@ -165,7 +165,7 @@ class Header extends StatelessWidget {
               Text(
                 "Design | MLSC",
                 style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                     color: Theme.of(context).disabledColor,
                     fontWeight: FontWeight.w500),
               ),
@@ -174,7 +174,7 @@ class Header extends StatelessWidget {
                 child: Text(
                   "Edit label",
                   style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 14,
                       color: Theme.of(context).textTheme.bodyText1!.color),
                 ),
               ),
@@ -211,7 +211,7 @@ class _BodyState extends State<Body> {
         maxLines: null,
         autofocus: textController.text.isNotEmpty ? false : true,
         controller: textController,
-        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+        style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
         textInputAction: TextInputAction.done,
         decoration: const InputDecoration(
             focusedBorder: InputBorder.none, enabledBorder: InputBorder.none),
