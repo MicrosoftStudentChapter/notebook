@@ -35,17 +35,23 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         primaryColorDark: Colors.black,
         canvasColor: Colors.white,
-        appBarTheme: const AppBarTheme(systemOverlayStyle: SystemUiOverlayStyle(statusBarBrightness: Brightness.light)),
+        dividerColor: const Color(0xff888888),
+        appBarTheme: const AppBarTheme(
+            systemOverlayStyle:
+                SystemUiOverlayStyle(statusBarBrightness: Brightness.light)),
       ),
       // Dark theme details
       darkTheme: ThemeData(
         primaryColor: Colors.black,
         primaryColorLight: Colors.black,
         brightness: Brightness.dark,
-        primaryColorDark: Colors.black,      
+        primaryColorDark: Colors.white,
         indicatorColor: Colors.white,
         canvasColor: Colors.black,
-        appBarTheme: const AppBarTheme(systemOverlayStyle: SystemUiOverlayStyle(statusBarBrightness: Brightness.dark)),
+        appBarTheme: const AppBarTheme(
+            systemOverlayStyle:
+                SystemUiOverlayStyle(statusBarBrightness: Brightness.dark)),
+        dividerColor: Colors.white,
       ),
     );
   }
