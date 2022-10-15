@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:notes_era/widget/text.custom.dart';
+
+import '../model/notes.model.dart';
 
 class ListNotes extends StatefulWidget {
   const ListNotes({Key? key}) : super(key: key);
@@ -65,13 +68,7 @@ class _ListNotesState extends State<ListNotes>
                         height: 30,
                       ),
                 const SizedBox(width: 10),
-                Text(
-                  'NoteBook',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24,
-                      color: Theme.of(context).textTheme.bodyText1!.color),
-                ),
+                const CustomText(name: 'NoteBook'),
                 const Spacer(),
                 IconButton(
                   onPressed: () {},
@@ -94,12 +91,12 @@ class _ListNotesState extends State<ListNotes>
 }
 
 class NotesListBody extends StatelessWidget {
-  NotesListBody({
+  const NotesListBody({
     Key? key,
     required this.tabController,
   }) : super(key: key);
 
-  TabController tabController;
+  final TabController tabController;
 
   @override
   Widget build(BuildContext context) {
@@ -149,7 +146,7 @@ class NotesListBody extends StatelessWidget {
 }
 
 class NoteListTile extends StatefulWidget {
-  NoteListTile({
+  const NoteListTile({
     super.key,
     required this.title,
     required this.noteText,
@@ -158,12 +155,12 @@ class NoteListTile extends StatefulWidget {
     required this.fillColor,
     required this.borderColor,
   });
-  String title;
-  String noteText;
-  String tag;
-  String date;
-  Color fillColor;
-  Color borderColor;
+  final String title;
+  final String noteText;
+  final String tag;
+  final String date;
+  final Color fillColor;
+  final Color borderColor;
 
   @override
   State<NoteListTile> createState() => _NoteListTileState();
@@ -191,13 +188,10 @@ class _NoteListTileState extends State<NoteListTile> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              widget.title,
-              style: TextStyle(
-                fontFamily: Theme.of(context).textTheme.bodyText1!.fontFamily,
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-              ),
+            CustomText(
+              name: widget.title,
+              fontFamily: Theme.of(context).textTheme.bodyText1!.fontFamily,
+              fontSize: 16,
             ),
             const SizedBox(height: 15),
             if (isExpanded) Text(widget.noteText),
@@ -215,60 +209,3 @@ class _NoteListTileState extends State<NoteListTile> {
     );
   }
 }
-
-List<Widget> notes = [
-  NoteListTile(
-    title: 'How to design using Photoshop',
-    noteText:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500 when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has',
-    tag: 'Design | MLSC',
-    date: '2022/09/07',
-    fillColor: const Color(0xffD9EFFF),
-    borderColor: const Color(0xff3C7DFB),
-  ),
-  NoteListTile(
-    title: 'How to be market a product?',
-    noteText:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500 when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has',
-    tag: 'Marketing | MLSC',
-    date: '2022/09/07',
-    fillColor: const Color(0xffFFE6D8),
-    borderColor: const Color.fromARGB(255, 255, 125, 50),
-  ),
-  NoteListTile(
-    title: 'How to use Final Cut Pro',
-    noteText:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500 when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has',
-    tag: 'Design | MLSC',
-    date: '2022/09/07',
-    fillColor: const Color(0xffEFFFDA),
-    borderColor: const Color.fromARGB(255, 100, 176, 0),
-  ),
-  NoteListTile(
-    title: 'How to be market a product?',
-    noteText:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500 when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has',
-    tag: 'Marketing | MLSC',
-    date: '2022/09/07',
-    fillColor: const Color(0xffF4D4FF),
-    borderColor: const Color.fromARGB(255, 150, 0, 200),
-  ),
-  NoteListTile(
-    title: 'How to design using Photoshop',
-    noteText:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500 when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has',
-    tag: 'Design | MLSC',
-    date: '2022/09/07',
-    fillColor: const Color(0xffFFCED4),
-    borderColor: const Color.fromARGB(255, 255, 104, 121),
-  ),
-  NoteListTile(
-    title: 'How to design using Photoshop',
-    noteText:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500 when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has',
-    tag: 'Design | MLSC',
-    date: '2022/09/07',
-    fillColor: const Color(0xffFFF7AB),
-    borderColor: const Color.fromARGB(255, 240, 216, 0),
-  ),
-];

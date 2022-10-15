@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:notes_era/spalsh.dart';
-import 'package:notes_era/welcome.dart';
-import 'package:notes_era/signup.dart';
-import 'package:notes_era/login.dart';
-import 'package:notes_era/listnotes.dart';
-import 'package:notes_era/expandnote.dart';
+import 'package:notes_era/pages/spalsh.dart';
+import 'package:notes_era/utils/theme.dart';
+import 'package:notes_era/pages/welcome.dart';
+import 'package:notes_era/pages/signup.dart';
+import 'package:notes_era/pages/login.dart';
+import 'package:notes_era/pages/listnotes.dart';
+import 'package:notes_era/pages/expandnote.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,38 +21,17 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       themeMode: ThemeMode.system,
       routes: {
-        '/': (context) => Splash(),
-        '/welcome': (context) => Welcome(),
-        '/signup': (context) => Signup(),
-        '/login': (context) => Login(),
-        '/list': (context) => ListNotes(),
-        '/expand': (context) => ExpandNotes()
+        '/': (context) => const Splash(),
+        '/welcome': (context) => const Welcome(),
+        '/signup': (context) => const Signup(),
+        '/login': (context) => const Login(),
+        '/list': (context) => const ListNotes(),
+        '/expand': (context) => const ExpandNotes()
       },
       //  Light theme details
-      theme: ThemeData(
-        primaryColor: Colors.white,
-        brightness: Brightness.light,
-        scaffoldBackgroundColor: Colors.white,
-        primaryColorDark: Colors.black,
-        canvasColor: Colors.white,
-        dividerColor: const Color(0xff888888),
-        appBarTheme: const AppBarTheme(
-            systemOverlayStyle:
-                SystemUiOverlayStyle(statusBarBrightness: Brightness.light)),
-      ),
+      theme: lightTheme(),
       // Dark theme details
-      darkTheme: ThemeData(
-        primaryColor: Colors.black,
-        primaryColorLight: Colors.black,
-        brightness: Brightness.dark,
-        primaryColorDark: Colors.white,
-        indicatorColor: Colors.white,
-        canvasColor: Colors.black,
-        appBarTheme: const AppBarTheme(
-            systemOverlayStyle:
-                SystemUiOverlayStyle(statusBarBrightness: Brightness.dark)),
-        dividerColor: Colors.white,
-      ),
+      darkTheme: darkTheme(),
     );
   }
 }
