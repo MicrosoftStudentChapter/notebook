@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notes_era/widget/text.custom.dart';
 
-import 'model/notes.model.dart';
+import '../model/notes.model.dart';
 
 class ListNotes extends StatefulWidget {
   const ListNotes({Key? key}) : super(key: key);

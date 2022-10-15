@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../listnotes.dart';
+import '../pages/listnotes.dart';
 
 List<Widget> notes = [
   const NoteListTile(

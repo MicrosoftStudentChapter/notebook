@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:notes_era/spalsh.dart';
+import 'package:notes_era/pages/spalsh.dart';
 import 'package:notes_era/utils/theme.dart';
 import 'package:notes_era/pages/welcome.dart';
 import 'package:notes_era/pages/signup.dart';
 import 'package:notes_era/pages/login.dart';
-import 'package:notes_era/listnotes.dart';
+import 'package:notes_era/pages/listnotes.dart';
 import 'package:notes_era/pages/expandnote.dart';
 
 void main() {
