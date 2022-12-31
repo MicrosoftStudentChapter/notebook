@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:notes_era/spalsh.dart';
 import 'package:notes_era/welcome.dart';
 import 'package:notes_era/signup.dart';
-import 'package:notes_era/login.dart';
+import 'package:notes_era/login/login.dart';
 import 'package:notes_era/listnotes.dart';
 import 'package:notes_era/expandnote.dart';
 
